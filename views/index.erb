@@ -1,0 +1,13 @@
+<h1>CookBook App</h1>
+  <ul class="list-group d-flex">
+    <% @cookbook.all.each_with_index do |recipe, index| %>
+      <div>
+        <li class="list-group-item">
+          <% done = recipe.done? ? "[X]" : "[ ]" %>
+          <%= "#{index + 1}. #{done} #{recipe.name} (#{recipe.prep_time}) - #{recipe.skill_level}" %>
+          <a href=<%="./destroy/#{index}"%> ><i class="fas fa-window-close"></i></a>
+        </li>
+      </div>
+    <% end %>
+  </ul>
+<a href="./new" class="btn btn-primary">ADD New Recipe</a>

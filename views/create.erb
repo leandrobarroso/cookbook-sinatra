@@ -1,0 +1,15 @@
+<h1>CookBook App</h1>
+<%= Time.now %>
+<h2>Add New Recipe</h2>
+
+<form method="POST" action="/recipes">
+  <label for="name">Recipe name:</label><br>
+  <input type="text" id="name" name="name" value=""><br>
+  <label for="description">Recipe description:</label><br>
+  <input type="text" id="description" name="description" value=""><br><br>
+  <label for="prep_time">Preparation time:</label><br>
+  <input type="text" id="prep_time" name="prep_time" value=""><br><br>
+  <label for="skill_level">Difficulty level:</label><br>
+  <input type="text" id="skill_level" name="skill_level" value=""><br><br>
+  <input type="submit" value="CREATE">
+</form>
